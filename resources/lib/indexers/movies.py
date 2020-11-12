@@ -457,7 +457,16 @@ class movies:
     def years(self):
         year = (self.datetime.strftime('%Y'))
 
-        for i in range(int(year)-0, 1900, -1): self.list.append({'name': str(i), 'url': self.year_link % (str(i), str(i), "1"), 'image': 'years.png', 'action': 'movies'})
+        for i in range(int(year)-0, 1899, -1): self.list.append({'name': str(i), 'url': self.year_link % (str(i), str(i), "1"), 'image': 'years.png', 'action': 'movies'})
+        self.addDirectory(self.list)
+        return self.list
+
+
+    def decades(self):
+        year = int(self.datetime.strftime('%Y'))
+        decade = year - (year % 10)
+
+        for i in range(int(decade)-0, 1890, -10): self.list.append({'name': str(i)+"er", 'url': self.year_link % (str(i), str(i+9), "1"), 'image': 'years.png', 'action': 'movies'})
         self.addDirectory(self.list)
         return self.list
 

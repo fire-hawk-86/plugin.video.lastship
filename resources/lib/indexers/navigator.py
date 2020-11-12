@@ -119,6 +119,7 @@ class navigator:
         self.addDirectoryItem("Auszeichnungen & Co", 'movieAwards', 'auszeichnungen.png', 'DefaultMovies.png')
         self.addDirectoryItem("Studios", 'movieStudios', 'movies.png', 'DefaultMovies.png')
         self.addDirectoryItem("Jahr", 'movieYears', 'years.png', 'DefaultMovies.png')
+        self.addDirectoryItem("Jahrzehnt", 'movieDecades', 'years.png', 'DefaultMovies.png')
         self.addDirectoryItem("Herkunftsland", 'movieCountryOfOrigin', 'languages.png', 'DefaultMovies.png')
         if control.setting('PersonalMovieList') == 'true':
             self.addDirectoryItem("IMDB-Listen", 'moviePersonalList', 'imdb.png', 'DefaultMovies.png')

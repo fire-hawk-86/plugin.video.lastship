@@ -258,6 +258,10 @@ elif action == 'movieYears':
     from resources.lib.indexers import movies
     movies.movies().years()
 
+elif action == 'movieDecades':
+    from resources.lib.indexers import movies
+    movies.movies().decades()
+
 elif action == 'moviePersons':
     from resources.lib.indexers import movies
     movies.movies().persons(url)
